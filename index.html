@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Otto — Car Dashboard Widgets</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(180deg, #141F45 0%, #0A0E20 100%);
+    background-attachment: fixed;
+    color: #F2F4FA;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 2.4rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  .tag { color: #FF9F0A; font-weight: 600; margin: 0 0 2.5rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .5rem; }
+  a { color: #FF9F0A; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  .card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 18px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  footer { margin-top: 4rem; color: #8A93AD; font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Otto</h1>
+  <p class="tag">Car dashboard widgets for CarPlay, Home Screen and Lock Screen.</p>
+
+  <p>Otto fills your car's dashboard with widgets that belong there: a clock in the
+  face you choose, your license plate, and a countdown to the dates that sneak up on
+  you — inspection, insurance, service. It saves where you parked, and it can greet
+  you through the car speakers when you get in.</p>
+
+  <h2>Support</h2>
+  <div class="card">
+    <p>Something broken, or an idea for what Otto should do next? Write to
+    <a href="mailto:kburakengin@gmail.com">kburakengin@gmail.com</a> and you'll get
+    a reply from a person.</p>
+    <p style="margin-bottom:0">Include your iPhone model and iOS version if you're
+    reporting a bug — it saves a round trip.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <p><strong>The welcome sound doesn't play when CarPlay connects.</strong><br>
+  iOS does not let an app create automations on your behalf, so this needs a one-time
+  automation in the Shortcuts app. Otto's Setup tab walks you through it. The usual
+  culprit is the automation being set to ask before running — open it in Shortcuts and
+  make sure <em>Run Immediately</em> is selected.</p>
+
+  <p><strong>My parking spot isn't saved automatically.</strong><br>
+  The disconnect automation needs the <em>Save Parking Spot</em> action, and location
+  access must be set to <em>Always</em> — otherwise iOS won't let Otto read your
+  location while it's in the background.</p>
+
+  <p><strong>The widgets aren't on my car's screen.</strong><br>
+  On your iPhone: Settings → General → CarPlay → your car, then add Otto's widgets to
+  the dashboard.</p>
+
+  <h2>Privacy</h2>
+  <p>Otto collects nothing. There is no account, no server and no analytics — see the
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>© 2026 Kadir Burak Engin</footer>
+</main>
+</body>
+</html>
