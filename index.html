@@ -40,6 +40,18 @@
   .appstore svg { width: 22px; height: 22px; fill: #0A0E20; }
   .trust { margin: 1.1rem 0 0; color: #8A93AD; font-size: .92rem; }
 
+  /* CarPlay in-car gallery */
+  .carplay-gallery {
+    display: flex; gap: 1rem; overflow-x: auto; padding: 2.5rem 0 .5rem;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  }
+  .carplay-gallery img {
+    flex: 0 0 auto; width: 86%; max-width: 640px; border-radius: 18px;
+    scroll-snap-align: center; box-shadow: 0 14px 40px rgba(0,0,0,.5);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .carplay-cap { margin: .9rem 0 0; color: #8A93AD; font-size: .92rem; text-align: center; }
+
   /* Screenshots */
   .shots {
     display: flex; gap: 1rem; overflow-x: auto; padding: 2.5rem 0 1rem;
@@ -91,6 +103,14 @@
     </a>
     <p class="trust">One-time Otto Pro · No subscription · Nothing leaves your phone</p>
   </section>
+
+  <div class="carplay-gallery" aria-label="Otto on a car's CarPlay dashboard">
+    <img src="assets/carplay-default.jpg" alt="Otto's clock, mascot and plate on a CarPlay dashboard">
+    <img src="assets/carplay-fuel.jpg" alt="Otto's fuel economy and odometer on a CarPlay dashboard">
+    <img src="assets/carplay-dates.jpg" alt="Otto's inspection and insurance countdown on a CarPlay dashboard">
+    <img src="assets/carplay-neon.jpg" alt="Otto in a neon theme on a CarPlay dashboard">
+  </div>
+  <p class="carplay-cap">Otto on the CarPlay dashboard — clock, fuel, reminders, your plate, your theme.</p>
 
   <section class="shots" aria-label="Screenshots">
     <img src="assets/2-otto.jpg" alt="Otto the mascot on the CarPlay dashboard">
