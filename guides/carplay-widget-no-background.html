@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why widgets look bare on CarPlay (and what fixes it) — Otto</title>
+<meta name="description" content="CarPlay does not draw a widget&#x27;s container background, so many widgets render as floating text on the car wallpaper. What is happening, why StandBy does the same, and what a fixed widget looks like.">
+<link rel="canonical" href="https://kburakengin.github.io/otto-support/guides/carplay-widget-no-background.html">
+<meta property="og:title" content="Why widgets look bare on CarPlay (and what fixes it)">
+<meta property="og:description" content="CarPlay does not draw a widget&#x27;s container background, so many widgets render as floating text on the car wallpaper. What is happening, why StandBy does the same, and what a fixed widget looks like.">
+<link rel="stylesheet" href="_style.css">
+</head>
+<body>
+<main>
+  <nav><a href="../">Otto</a> › <a href="./">Guides</a></nav>
+  <h1>Why widgets look bare on CarPlay (and what fixes it)</h1>
+  <p class="date">Updated 13 September 2026 · iOS 26</p>
+  <p class="lede">If a widget looks like loose text with no card behind it on your car screen, the app handed its background to the system and CarPlay threw it away. Nothing you can change in Settings; the app has to draw its own surface.</p>
+
+  <h2>What CarPlay does</h2>
+  <p>On the Home Screen a widget sits on a rounded card that iOS draws for it. On the CarPlay dashboard that card is never drawn. Every widget is shown in what Apple calls <em>prominent</em> rendering, the same mode StandBy uses: full colour, no container. A widget designed for the phone suddenly has no edge, no fill, and its text lands directly on your car's wallpaper.</p>
+  <p>We hit this with five widgets on one screen: four looked like strangers, one looked designed. The one that looked right painted its own sky as content. The rest had trusted the container. So now every Otto widget draws the shared surface itself; the car cannot strip what isn't in the container.</p>
+
+  <h2>Why it is easy to get wrong</h2>
+  <p>Developers can't preview the dashboard in Xcode's simulator, and the phone's Home Screen hides the problem. The first time most apps see the bare rendering is in a customer's car. Another wrinkle: prominent mode is also StandBy, and iOS gives the app no signal to tell a bright windshield from a dark nightstand. So a widget tuned for the car is the same widget that lights up your bedroom.</p>
+
+  <h2>What to do</h2>
+  <ul>
+    <li>Nothing in Settings fixes it; widgets have no per-surface options.</li>
+    <li>Pick widgets whose colour lives in the content: a filled clock face, a plate with its own band, a card with a painted background.</li>
+    <li>If a widget you like is bare, tell the developer "your widget has no background on the CarPlay dashboard". It is a one-line fix once they know, and most don't.</li>
+  </ul>
+
+  <h2>Contrast matters more in the car</h2>
+  <p>A colour that reads fine on a desk can vibrate on a windshield-lit screen. We measured every accent against every time-of-day background: a green that looked fine measured 3.6:1 and a red measured 3.3:1, both below what small text needs. Otto's surface and accents are now tuned so every combination clears 5:1. If a widget is hard to read at noon, that is why.</p>
+
+  <div class="otto">
+    <p><strong>Otto</strong> is a free app that puts a clock, your license plate, inspection and insurance countdowns, fuel and parking on the CarPlay dashboard, Home Screen and Lock Screen. Everything in this guide is how Otto itself works on a real car screen.
+    <a href="https://apps.apple.com/app/id6790812327">Get Otto on the App Store</a>.</p>
+  </div>
+  <p class="more">Related: <a href="carplay-dashboard-widgets.html">What works on the dashboard</a> · <a href="carplay-clock-widget.html">Clock on the dashboard</a> · <a href="add-widgets-to-carplay-dashboard.html">Add widgets to the dashboard</a></p>
+  <footer>© 2026 Kadir Burak Engin · <a href="../">Support</a> · <a href="../privacy.html">Privacy</a></footer>
+</main>
+</body>
+</html>

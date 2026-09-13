@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A clock on the CarPlay dashboard — Otto</title>
+<meta name="description" content="How to get a readable clock widget on your car&#x27;s CarPlay dashboard: faces, contrast at noon and at night, and why the built-in clock is not enough.">
+<link rel="canonical" href="https://kburakengin.github.io/otto-support/guides/carplay-clock-widget.html">
+<meta property="og:title" content="A clock on the CarPlay dashboard">
+<meta property="og:description" content="How to get a readable clock widget on your car&#x27;s CarPlay dashboard: faces, contrast at noon and at night, and why the built-in clock is not enough.">
+<link rel="stylesheet" href="_style.css">
+</head>
+<body>
+<main>
+  <nav><a href="../">Otto</a> › <a href="./">Guides</a></nav>
+  <h1>A clock on the CarPlay dashboard</h1>
+  <p class="date">Updated 13 September 2026 · iOS 26</p>
+  <p class="lede">The clock CarPlay gives you is a few points tall in the status bar. A clock widget takes the full dashboard slot, in a face you choose, readable at arm's length while driving.</p>
+
+  <h2>Why a clock widget</h2>
+  <p>CarPlay's own time sits in the status bar next to the signal icons. Most drivers end up looking at the car's cluster clock instead, which is often the one thing on the dash that is <em>wrong</em> after a time change. A dashboard widget shows the phone's time, always correct, in large type.</p>
+
+  <h2>Faces</h2>
+  <p>Otto ships five: digital, analog, a retro LCD, and two more. Each widget instance is configured separately, so a Home Screen clock and the CarPlay clock can be different faces. Long-press the widget on the Home Screen to change the face; the dashboard follows.</p>
+
+  <h2>Readable at noon and at midnight</h2>
+  <p>The dashboard shows widgets without a container background, so the clock's own surface is the only thing behind the digits. Otto's surface shifts with the time of day, which means the accent colour lands on a different background every hour. We measured every combination and adjusted until each one clears 5:1 contrast (the WCAG AA line for text). If you find a face hard to read in bright sun, switch to a higher-contrast theme; the neon and classic themes are the strongest.</p>
+
+  <h2>Otto, the other clock</h2>
+  <p>There is also a small car with a face that reads the clock: sleepy at midnight, bright at noon, headlights on after dark. It is decorative, and it is still allowed on the dashboard, because Apple's test is whether a widget needs interaction while driving, not whether it is useful. Glanceable is the rule; a character that changes with the hour passes it.</p>
+
+  <h2>Setting it up</h2>
+  <p>Add the clock from <strong>Settings → General → CarPlay → your car → Dashboard</strong>, as in <a href="add-widgets-to-carplay-dashboard.html">the setup guide</a>. Put it first so it is on the page you see without swiping.</p>
+
+  <div class="otto">
+    <p><strong>Otto</strong> is a free app that puts a clock, your license plate, inspection and insurance countdowns, fuel and parking on the CarPlay dashboard, Home Screen and Lock Screen. Everything in this guide is how Otto itself works on a real car screen.
+    <a href="https://apps.apple.com/app/id6790812327">Get Otto on the App Store</a>.</p>
+  </div>
+  <p class="more">Related: <a href="carplay-dashboard-widgets.html">What works on the dashboard</a> · <a href="carplay-widget-no-background.html">Why widgets look bare</a> · <a href="license-plate-widget.html">License plate widget</a></p>
+  <footer>© 2026 Kadir Burak Engin · <a href="../">Support</a> · <a href="../privacy.html">Privacy</a></footer>
+</main>
+</body>
+</html>
