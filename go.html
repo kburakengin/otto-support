@@ -26,7 +26,11 @@
   var params = new URLSearchParams(location.search);
   // Keep the token short and alphanumeric; Apple truncates long campaign values.
   var campaign = (params.get("c") || "meta-tr-aug").replace(/[^a-zA-Z0-9._-]/g, "").slice(0, 40);
-  var target = "https://apps.apple.com/tr/app/id" + APP_ID + "?ct=" + campaign + "&mt=8";
+  // No country code in the path: Apple resolves the visitor's own storefront.
+  // It used to be hardcoded to /tr/, which was right for a Turkish ad campaign
+  // and wrong for everything else — a US visitor from Product Hunt landed on the
+  // Turkish listing.
+  var target = "https://apps.apple.com/app/id" + APP_ID + "?ct=" + campaign + "&mt=8";
   // replace() rather than href: the redirect shouldn't sit in the back stack,
   // or "back" from the App Store lands here and bounces the visitor again.
   location.replace(target);
@@ -34,7 +38,7 @@
 
 <!-- Fallback for anyone with JavaScript disabled. -->
 <noscript>
-  <meta http-equiv="refresh" content="0; url=https://apps.apple.com/tr/app/id6790812327?ct=meta-tr-aug&amp;mt=8">
+  <meta http-equiv="refresh" content="0; url=https://apps.apple.com/app/id6790812327?ct=meta-tr-aug&amp;mt=8">
 </noscript>
 
 <style>
