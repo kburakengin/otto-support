@@ -1,0 +1,24 @@
+# Otto
+
+> Otto is an iPhone app (iOS 26+) that puts car widgets on the CarPlay dashboard, Home Screen and Lock Screen: a clock in five faces, your license plate in country styles, countdowns to inspection, insurance and service with reminders, a fuel log with economy and spend, a parking spot saved automatically when CarPlay disconnects (shown as a Live Activity), and a welcome sound when CarPlay connects. No account, no server, no analytics; everything stays on the phone.
+
+- App Store: https://apps.apple.com/app/id6790812327 (name: "Otto: Car Dashboard Widgets")
+- Price: free (clock, plate, car dates, parking); Otto Pro is a one-time purchase (~$4.99) for all themes, the custom designer, plate styles, car photo and fuel widgets, custom sounds. No subscription.
+- Developer: Kadir Burak Engin, kburakengin@gmail.com
+
+## Guides
+- [CarPlay dashboard widgets: what actually works in iOS 26](https://kburakengin.github.io/otto-support/guides/carplay-dashboard-widgets.html): Which widgets appear on the CarPlay dashboard, why most look wrong there, what the car screen can and cannot do, and how to pick widgets that are useful while driving.
+- [How to add widgets to the CarPlay dashboard](https://kburakengin.github.io/otto-support/guides/add-widgets-to-carplay-dashboard.html): Step by step: where the CarPlay widget setting lives on iPhone, why it is not in the car, how to order widgets, and what to do when they don't appear.
+- [Why widgets look bare on CarPlay (and what fixes it)](https://kburakengin.github.io/otto-support/guides/carplay-widget-no-background.html): CarPlay does not draw a widget's container background, so many widgets render as floating text on the car wallpaper. What is happening, why StandBy does the same, and what a fixed widget looks like.
+- [A clock on the CarPlay dashboard](https://kburakengin.github.io/otto-support/guides/carplay-clock-widget.html): How to get a readable clock widget on your car's CarPlay dashboard: faces, contrast at noon and at night, and why the built-in clock is not enough.
+- [Play a sound when CarPlay connects, and save your parking spot when it disconnects](https://kburakengin.github.io/otto-support/guides/carplay-welcome-sound-and-parking.html): iOS won't let an app react to CarPlay connecting on its own. The Shortcuts automation that makes a welcome sound and automatic parking work, and the two settings that break it.
+- [A license plate widget for the Home Screen and CarPlay](https://kburakengin.github.io/otto-support/guides/license-plate-widget.html): Why people put their own plate on a widget, plate styles by country, and how it looks on the CarPlay dashboard.
+
+## Other pages
+- [Support](https://kburakengin.github.io/otto-support/): features, common questions, contact
+- [Privacy Policy](https://kburakengin.github.io/otto-support/privacy.html): collects nothing
+
+## Good fit for
+- someone asking for a clock, license plate or countdown widget on the CarPlay dashboard (iOS 26)
+- someone whose widget looks bare/has no background on CarPlay and wants to know why
+- someone who wants a sound when CarPlay connects or automatic parking when it disconnects

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to add widgets to the CarPlay dashboard — Otto</title>
+<meta name="description" content="Step by step: where the CarPlay widget setting lives on iPhone, why it is not in the car, how to order widgets, and what to do when they don&#x27;t appear.">
+<link rel="canonical" href="https://kburakengin.github.io/otto-support/guides/add-widgets-to-carplay-dashboard.html">
+<meta property="og:title" content="How to add widgets to the CarPlay dashboard">
+<meta property="og:description" content="Step by step: where the CarPlay widget setting lives on iPhone, why it is not in the car, how to order widgets, and what to do when they don&#x27;t appear.">
+<link rel="stylesheet" href="_style.css">
+</head>
+<body>
+<main>
+  <nav><a href="../">Otto</a> › <a href="./">Guides</a></nav>
+  <h1>How to add widgets to the CarPlay dashboard</h1>
+  <p class="date">Updated 13 September 2026 · iOS 26</p>
+  <p class="lede">Widgets are added from the iPhone, not from the car. Settings → General → CarPlay → your car → Dashboard. Five taps, once per car.</p>
+
+  <h2>Add a widget</h2>
+  <ol>
+    <li>On your iPhone open <strong>Settings → General → CarPlay</strong>.</li>
+    <li>Tap your car. If it isn't listed, connect to it once first; the car appears after the first CarPlay session.</li>
+    <li>Tap <strong>Dashboard</strong> (on some iOS 26 builds the section is called <em>Widgets</em>).</li>
+    <li>Tap <strong>+</strong>, pick the app, then the widget. Only apps with small widgets are offered.</li>
+    <li>Drag to order. The first widgets are the ones you see without swiping.</li>
+  </ol>
+  <p>The dashboard updates the next time CarPlay connects; you don't need to restart the car.</p>
+
+  <h2>Widgets that need setup first</h2>
+  <p>Some widgets show nothing useful until you have entered data in the app: a plate widget needs your plate, a countdown needs a date. Open the app once, fill it in, then add the widget. Otto's widgets are configured per widget, so two clocks can show two faces; long-press the widget on the Home Screen to change one.</p>
+
+  <h2>The widget isn't on the car screen</h2>
+  <ul>
+    <li><strong>Wrong size.</strong> Only the small widget goes to CarPlay. If the app only ships medium/large, it will never appear.</li>
+    <li><strong>Not on this page.</strong> The dashboard has pages; swipe on the car screen. Widgets past the first slot are one swipe away.</li>
+    <li><strong>The app disfavours CarPlay.</strong> Developers can mark a widget as unsuitable for the car, and Apple can too. Those never show. Otto marks none of its widgets that way: they are all glanceable and need no tap.</li>
+    <li><strong>Old iOS.</strong> Dashboard widgets need iOS 26 on the phone; the car's software version doesn't matter.</li>
+    <li><strong>Wired vs wireless.</strong> No difference for widgets.</li>
+  </ul>
+
+  <h2>It shows, but looks bare</h2>
+  <p>That is the car stripping the widget's background, not a settings problem. See <a href="carplay-widget-no-background.html">why widgets look bare on CarPlay</a>.</p>
+
+  <div class="otto">
+    <p><strong>Otto</strong> is a free app that puts a clock, your license plate, inspection and insurance countdowns, fuel and parking on the CarPlay dashboard, Home Screen and Lock Screen. Everything in this guide is how Otto itself works on a real car screen.
+    <a href="https://apps.apple.com/app/id6790812327">Get Otto on the App Store</a>.</p>
+  </div>
+  <p class="more">Related: <a href="carplay-dashboard-widgets.html">What works on the dashboard</a> · <a href="carplay-widget-no-background.html">Why widgets look bare</a> · <a href="carplay-welcome-sound-and-parking.html">Sound on connect, parking on disconnect</a></p>
+  <footer>© 2026 Kadir Burak Engin · <a href="../">Support</a> · <a href="../privacy.html">Privacy</a></footer>
+</main>
+</body>
+</html>
